@@ -20,6 +20,10 @@ And image was build with the `docker-exercise:1` tag
 docker build -t docker-exercise:1 . 
 ```
 
+Build output:
+
+![Alt text](images/1-build.png?raw=true "Build output")
+
 ## Run locally
 
 Using `8080` local port
@@ -28,6 +32,10 @@ Using `8080` local port
 docker run -p 8080:80 docker-exercise:1
 ```
 
+Default message output:
+
+![Alt text](images/2-Default-message.png?raw=true "Default message")
+
 ## Change MESSAGE env var
 
 Rerun container other `MESSAGE` env var
@@ -35,6 +43,10 @@ Rerun container other `MESSAGE` env var
 ```bash
 docker run -p 8080:80 -e MESSAGE='Hello World' docker-exercise:1  
 ```
+
+Hello World output:
+
+![Alt text](images/3-Hello-World.png?raw=true "Hello World")
 
 ## Push to Docker Hub
 
@@ -135,3 +147,20 @@ spec:
             port:
               number: 8080
 ```
+
+## Resources
+
+All resources created in the cluster:
+
+![Alt text](images/4-commands.png?raw=true "resources")
+
+
+## URLs
+
+NodePort service:
+
+http://137.184.187.180:30000/
+
+Ingress:
+
+http://137.184.247.199/
